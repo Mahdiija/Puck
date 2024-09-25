@@ -1,24 +1,21 @@
-import type { Config } from "@measured/puck";
+import { DropZone, type Config } from "@measured/puck";
+import Cards from "./components/Cards";
+    
+
 
 type Props = {
-  HeadingBlock: { title: string };
+  
+  PokemonCards: { pokemon: any };     
 };
+
 
 export const config: Config<Props> = {
   components: {
-    HeadingBlock: {
-      fields: {
-        title: { type: "text" },
-      },
-      defaultProps: {
-        title: "Heading",
-      },
-      render: ({ title }) => (
-        <div style={{ padding: 64 }}>
-          <h1>{title}</h1>
-        </div>
-      ),
+    
+    PokemonCards: {
+      render: Cards, 
     },
+   
   },
 };
 

@@ -1,9 +1,9 @@
-"use client";
+
 
 import type { Data } from "@measured/puck";
-import { Render } from "@measured/puck";
+import { Render } from "@measured/puck/rsc";
 import config from "../../puck.config";
 
-export function Client({ data }: { data: Data }) {
+export const Client = ({ data }: { data: Data }) =>  {
   return <Render config={config} data={data} />;
 }
